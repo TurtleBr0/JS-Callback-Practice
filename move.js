@@ -35,19 +35,22 @@ function move(element) {
         
         document.addEventListener('keydown', function(e){
             if(e.repeat) return;
+
+            //inverted controls
         
-            if(e.key === 'ArrowLeft'){
+            if(e.key === 'ArrowRight'){
                 direction = 'west'
             }
-            if(e.key === 'ArrowUp'){
+            if(e.key === 'ArrowDown'){
                 direction = 'north'
             }
-            if(e.key === 'ArrowRight'){
+            if(e.key === 'ArrowLeft'){
                 direction = 'east'
             }
-            if(e.key === 'ArrowDown'){
+            if(e.key === 'ArrowUp'){
                 direction = 'south'
             }
+
             callback(direction)
         })
         
